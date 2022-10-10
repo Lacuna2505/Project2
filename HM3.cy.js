@@ -64,7 +64,7 @@ before(() => {
 })
 
 params.forEach(({args, expected}) => {
-    it('Toast test', () => {
+    it(`Toast test ${args.position}`, () => {
         cy.get('ngx-toaster', {timeout: 10000})
 
         cy.get('div.form-group [name="title"]').clear().type(title)
